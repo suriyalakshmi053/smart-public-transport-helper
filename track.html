@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Track Bus</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="search.html">Search Bus</a>
+<a href="buses.html">Bus List</a>
+<a href="track.html">Track Bus</a>
+<a href="index.html">Logout</a>
+</div>
+
+<div class="track-container">
+
+<h1>Track Bus</h1>
+
+<select id="busSelect" onchange="showBusLocation()">
+
+<option value="">Select Bus</option>
+
+<option value="1">BUS101 - Chennai → Pondicherry</option>
+<option value="2">BUS102 - Pondicherry → Chennai</option>
+<option value="3">BUS103 - Villupuram → Chennai</option>
+<option value="4">BUS104 - Chennai → Villupuram</option>
+<option value="5">BUS105 - Cuddalore → Pondicherry</option>
+<option value="6">BUS106 - Pondicherry → Cuddalore</option>
+<option value="7">BUS107 - Tindivanam → Chennai</option>
+<option value="8">BUS108 - Chennai → Tindivanam</option>
+
+</select>
+
+<div id="map"></div>
+
+<div id="locationInfo"></div>
+
+<button id="detailsBtn" onclick="showDetails()">View Bus Details</button>
+
+<div id="busDetails"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+</body>
+</html>
